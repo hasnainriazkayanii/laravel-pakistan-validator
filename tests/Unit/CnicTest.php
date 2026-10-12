@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Markhor\PakistanValidator\Tests\Unit;
 
-use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
 use Markhor\PakistanValidator\Enums\Gender;
 use Markhor\PakistanValidator\Enums\Province;
 use Markhor\PakistanValidator\Exceptions\InvalidCnicException;
 use Markhor\PakistanValidator\ValueObjects\Cnic;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
 
 final class CnicTest extends TestCase
 {

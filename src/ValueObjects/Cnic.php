@@ -36,7 +36,7 @@ final class Cnic implements JsonSerializable, Stringable
             $value = (string) $value;
         }
 
-        if (! is_string($value)) {
+        if (!is_string($value)) {
             return null;
         }
 

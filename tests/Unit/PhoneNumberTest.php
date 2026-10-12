@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Markhor\PakistanValidator\Tests\Unit;
 
-use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
 use Markhor\PakistanValidator\Enums\Carrier;
 use Markhor\PakistanValidator\Enums\PhoneType;
 use Markhor\PakistanValidator\Exceptions\InvalidPhoneNumberException;
 use Markhor\PakistanValidator\ValueObjects\PhoneNumber;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
 
 final class PhoneNumberTest extends TestCase
 {
