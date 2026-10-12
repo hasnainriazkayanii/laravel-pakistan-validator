@@ -21,10 +21,11 @@ use Markhor\PakistanValidator\Support\Digits;
  */
 final class PhoneNumber implements JsonSerializable, Stringable
 {
-    private function __construct(
-        public readonly string $nationalNumber,
-        public readonly PhoneType $type,
-    ) {}
+   private function __construct(
+    public readonly string $nationalNumber,
+    public readonly PhoneType $type,
+) {
+}
 
     public static function parse(mixed $value): self
     {

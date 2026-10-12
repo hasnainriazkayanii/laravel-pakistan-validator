@@ -19,7 +19,10 @@ use Markhor\PakistanValidator\Support\Digits;
  */
 final class Cnic implements JsonSerializable, Stringable
 {
-    private function __construct(public readonly string $digits) {}
+  private function __construct(
+    public readonly string $digits
+) {
+}
 
     public static function parse(mixed $value): self
     {
