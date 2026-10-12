@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Markhor\PakistanValidator\ValueObjects;
 
 use JsonSerializable;
-use Stringable;
 use Markhor\PakistanValidator\Enums\Gender;
 use Markhor\PakistanValidator\Enums\Province;
 use Markhor\PakistanValidator\Exceptions\InvalidCnicException;
 use Markhor\PakistanValidator\Support\Digits;
+use Stringable;
 
 /**
  * Immutable, always-valid Pakistani CNIC (13 digits: XXXXX-XXXXXXX-X).
@@ -19,10 +19,9 @@ use Markhor\PakistanValidator\Support\Digits;
  */
 final class Cnic implements JsonSerializable, Stringable
 {
-  private function __construct(
-    public readonly string $digits
-) {
-}
+    private function __construct(
+        public readonly string $digits
+    ) {}
 
     public static function parse(mixed $value): self
     {
@@ -39,7 +38,7 @@ final class Cnic implements JsonSerializable, Stringable
             $value = (string) $value;
         }
 
-        if (!is_string($value)) {
+        if (! is_string($value)) {
             return null;
         }
 
