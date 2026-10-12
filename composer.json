@@ -1,0 +1,39 @@
+{
+    "name": "markhor/laravel-pakistan-validator",
+    "description": "Pakistani CNIC and phone number validation, normalization, value objects and Eloquent casts for Laravel.",
+    "keywords": ["laravel", "pakistan", "cnic", "nic", "nadra", "phone", "e164", "validation", "rule"],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/validation": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^2.9|^3.0",
+        "laravel/pint": "^1.13",
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^10.5|^11.5"
+    },
+    "autoload": {
+        "psr-4": { "Markhor\\PakistanValidator\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Markhor\\PakistanValidator\\Tests\\": "tests/" }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Markhor\\PakistanValidator\\PakistanValidatorServiceProvider"]
+        }
+    },
+    "config": { "sort-packages": true },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
